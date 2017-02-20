@@ -10,7 +10,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin'; injectTapEventPlugin(
 
 var connect = require('react-redux').connect;
 
-class SearchResults extends React.Component{
+export class SearchResults extends React.Component{
   constructor(props){
     super(props);
     this.handleUpdateInput = this.handleUpdateInput.bind(this);
@@ -43,9 +43,6 @@ class SearchResults extends React.Component{
       });
     }  
   }
-
-  componentDidMount(){
-  }
   
   render(){
     return(
@@ -69,4 +66,4 @@ var mapStateToProps = function(state, props) {
 };
 
 var Container = connect(mapStateToProps)(SearchResults);
-module.exports = Container;
+export default Container;

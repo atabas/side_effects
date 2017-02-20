@@ -14,7 +14,7 @@ import ActionInfo from 'material-ui/svg-icons/action/info';
 var connect = require('react-redux').connect;
 
 
-class Reactions extends React.Component{
+export class Reactions extends React.Component{
   constructor(props){
     super(props);
     this.showReactions = this.showReactions.bind(this);
@@ -50,4 +50,5 @@ var mapStateToProps = function(state, props) {
 };
 
 var Container = connect(mapStateToProps)(Reactions);
-module.exports = Container;
+export default Container;
+

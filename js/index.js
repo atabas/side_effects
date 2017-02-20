@@ -16,7 +16,9 @@ var IndexRoute = router.IndexRoute;
 var Link = router.Link;
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
 var SearchResults = require('./components/searchresults');
+import App from './components/app';
 import Reactions from './components/reactions';
 import Appbar from './components/appbar';
 import Info from './components/info';
@@ -27,29 +29,6 @@ const AppBarExampleIcon = () => (
     title="Side Effects"
   />
 );
-
-class App extends React.Component{
-  render(){
-    
-
-    return(
-      <MuiThemeProvider>
-
-        <div className="container">
-          <div className="app-desc">
-            <Appbar />
-            <Info />
-          </div>
-          
-          <SearchResults />
-          {/*this.props.children*/}
-          <Reactions />
-        </div>
-      </MuiThemeProvider>
-      
-    );
-  }
-}
 
 document.addEventListener('DOMContentLoaded', function() {
   ReactDOM.render(
